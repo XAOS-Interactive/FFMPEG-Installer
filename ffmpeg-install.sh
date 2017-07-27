@@ -1,23 +1,23 @@
 #!/usr/bin/bash
 
 #Build Directory Settings
-export INSTALLER_DIR=/opt/ffmpeg_installer
-export INSTALLERS_DIR=/opt/ffmpeg_installer/installers
-export BUILD_DIR=/opt/ffmpeg_build
-export SOURCES_DIR=/opt/ffmpeg_sources
-export NASM_REPO=/etc/yum.repos.d/nasm.repo
+INSTALLER_DIR=/opt/ffmpeg_installer
+INSTALLERS_DIR=/opt/ffmpeg_installer/installers
+BUILD_DIR=/opt/ffmpeg_build
+SOURCES_DIR=/opt/ffmpeg_sources
+NASM_REPO=/etc/yum.repos.d/nasm.repo
 
 #Sources
-export yasm=$SOURCES_DIR/yasm-1.3.0
-export libx264=$SOURCES_DIR/x264
-export libx265=$SOURCES_DIR/x265
-export libfdk_aac=$SOURCES_DIR/fdk-aac
-export libmp3lame=$SOURCES_DIR/lame-3.99.5
-export libopus=$SOURCES_DIR/opus-1.1.5
-export libogg=$SOURCES_DIR/libogg-1.3.2
-export libvorbis=$SOURCES_DIR/libvorbis-1.3.4
-export libvpx=$SOURCES_DIR/libvpx
-export ffmpeg=$SOURCES_DIR/ffmpeg
+yasm=$SOURCES_DIR/yasm-1.3.0
+libx264=$SOURCES_DIR/x264
+libx265=$SOURCES_DIR/x265
+libfdk_aac=$SOURCES_DIR/fdk-aac
+libmp3lame=$SOURCES_DIR/lame-3.99.5
+libopus=$SOURCES_DIR/opus-1.1.5
+libogg=$SOURCES_DIR/libogg-1.3.2
+libvorbis=$SOURCES_DIR/libvorbis-1.3.4
+libvpx=$SOURCES_DIR/libvpx
+ffmpeg=$SOURCES_DIR/ffmpeg
 
 # Am I root?
 if [ "x$(id -u)" != 'x0' ]; then
@@ -36,6 +36,7 @@ fi
 
 if [ ! -d $BUILD_DIR ]; then
   mkdir $BUILD_DIR
+  mkdir $BUILD_DIR/bin
   echo "Build directory created, continuing install..."
 fi
 
