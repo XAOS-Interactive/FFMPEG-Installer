@@ -22,17 +22,17 @@ downloadInstallers()
 	
 	if [ ! -s "$INSTALLER_DIR/libmp3lame.sh" ]; then
 		#Download the install script from github
-		wget https://raw.githubusercontent.com/XAOS-Interactive/FFMPEG-Installer/master/installers/libfdk.sh -O $INSTALLERS_DIR/libmp3lame.sh
+		wget https://raw.githubusercontent.com/XAOS-Interactive/FFMPEG-Installer/master/installers/libmp3lame.sh -O $INSTALLERS_DIR/libmp3lame.sh
 	fi
 	
 	if [ ! -s "$INSTALLER_DIR/libopus.sh" ]; then
 		#Download the install script from github
-		wget https://raw.githubusercontent.com/XAOS-Interactive/FFMPEG-Installer/master/installers/libfdk.sh -O $INSTALLERS_DIR/libopus.sh
+		wget https://raw.githubusercontent.com/XAOS-Interactive/FFMPEG-Installer/master/installers/libopus.sh -O $INSTALLERS_DIR/libopus.sh
 	fi
 	
 	if [ ! -s "$INSTALLER_DIR/libogg.sh" ]; then
 		#Download the install script from github
-		wget https://raw.githubusercontent.com/XAOS-Interactive/FFMPEG-Installer/master/installers/libfdk.sh -O $INSTALLERS_DIR/libogg.sh
+		wget https://raw.githubusercontent.com/XAOS-Interactive/FFMPEG-Installer/master/installers/libogg.sh -O $INSTALLERS_DIR/libogg.sh
 	fi
 	
 	if [ ! -s "$INSTALLER_DIR/libvorbis.sh" ]; then
