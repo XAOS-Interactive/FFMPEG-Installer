@@ -14,7 +14,8 @@ libx265=$SOURCES_DIR/x265
 libfdk_aac=$SOURCES_DIR/fdk-aac
 libmp3lame=$SOURCES_DIR/lame-3.99.5
 libopus=$SOURCES_DIR/opus-1.1.5
-libogg=$SOURCES_DIR/libvorbis-1.3.4
+libogg=$SOURCES_DIR/libogg-1.3.2
+libvorbis=$SOURCES_DIR/libvorbis-1.3.4
 libvpx=$SOURCES_DIR/libvpx
 ffmpeg=$SOURCES_DIR/ffmpeg
 
@@ -71,4 +72,57 @@ check_result() {
 
 downloadInstallers
 
-echo "Downloading Required Packages..."
+#Load the installers
+. $INSTALLERS_DIR/yasm.sh
+. $INSTALLERS_DIR/x264.sh
+. $INSTALLERS_DIR/x265.sh
+. $INSTALLERS_DIR/libfdk.sh
+. $INSTALLERS_DIR/libmp3lame.sh
+. $INSTALLERS_DIR/libopus.sh
+. $INSTALLERS_DIR/libogg.sh
+. $INSTALLERS_DIR/libvorbis.sh
+. $INSTALLERS_DIR/libvpx.sh
+. $INSTALLERS_DIR/ffmpeg.sh
+
+#Run the installers
+#Install yasm
+cd $SOURCES_DIR
+yasmInstall
+
+#Install libx264
+cd $SOURCES_DIR
+x264Install
+
+#Install libx265
+cd $SOURCES_DIR
+x265Install
+
+#Install libfdk_aac
+cd $SOURCES_DIR
+libfdkInstall
+
+#Install libmp3lame
+cd $SOURCES_DIR
+lameInstall
+
+#Install libopus
+cd $SOURCES_DIR
+opusInstall
+
+#Install libogg
+cd $SOURCES_DIR
+oggInstall
+
+#Install libvorbis
+cd $SOURCES_DIR
+vorbisInstall
+
+#Install libvpx
+cd $SOURCES_DIR
+vpxInstall
+
+#Finally install ffmpeg
+cd $SOURCES_DIR
+ffmpegInstall
+
+

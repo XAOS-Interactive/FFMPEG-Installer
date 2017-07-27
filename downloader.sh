@@ -35,9 +35,14 @@ downloadInstallers()
 		wget https://raw.githubusercontent.com/XAOS-Interactive/FFMPEG-Installer/master/installers/libfdk.sh -O $INSTALLERS_DIR/libogg.sh
 	fi
 	
+	if [ ! -s "$INSTALLER_DIR/libvorbis.sh" ]; then
+		#Download the install script from github
+		wget https://raw.githubusercontent.com/XAOS-Interactive/FFMPEG-Installer/master/installers/libvorbis.sh -O $INSTALLERS_DIR/libvorbis.sh
+	fi
+	
 	if [ ! -s "$INSTALLER_DIR/libvpx.sh" ]; then
 		#Download the install script from github
-		wget https://raw.githubusercontent.com/XAOS-Interactive/FFMPEG-Installer/master/installers/libfdk.sh -O $INSTALLERS_DIR/libvpx.sh
+		wget https://raw.githubusercontent.com/XAOS-Interactive/FFMPEG-Installer/master/installers/libvpx.sh -O $INSTALLERS_DIR/libvpx.sh
 	fi
 	
 	if [ ! -s "$INSTALLER_DIR/ffmpeg.sh" ]; then
