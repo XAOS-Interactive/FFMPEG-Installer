@@ -49,4 +49,9 @@ downloadInstallers()
 		#Download the install script from github
 		wget https://raw.githubusercontent.com/XAOS-Interactive/FFMPEG-Installer/master/installers/ffmpeg.sh -O $INSTALLERS_DIR/ffmpeg.sh
 	fi
+	
+	if [ ! -s "$INSTALLER_DIR/freetype.sh" ]; then
+		#Download the install script from github
+		wget https://raw.githubusercontent.com/XAOS-Interactive/FFMPEG-Installer/master/installers/freetype.sh -O $INSTALLERS_DIR/freetype.sh
+	fi
 }
