@@ -18,6 +18,7 @@ libogg=$SOURCES_DIR/libogg-1.3.2
 libvorbis=$SOURCES_DIR/libvorbis-1.3.4
 libvpx=$SOURCES_DIR/libvpx
 ffmpeg=$SOURCES_DIR/ffmpeg
+freetype=$SOURCES_DIR/freetype-2.4.0
 
 # Am I root?
 if [ "x$(id -u)" != 'x0' ]; then
@@ -84,6 +85,7 @@ downloadInstallers
 . $INSTALLERS_DIR/libvorbis.sh
 . $INSTALLERS_DIR/libvpx.sh
 . $INSTALLERS_DIR/ffmpeg.sh
+. $INSTALLERS_DIR/freetype.sh
 
 #Run the installers
 #Install yasm
@@ -121,6 +123,10 @@ vorbisInstall
 #Install libvpx
 cd $SOURCES_DIR
 vpxInstall
+
+#Install freetyp2
+cd $SOURCES_DIR
+freetypeInstall
 
 #Finally install ffmpeg
 cd $SOURCES_DIR
