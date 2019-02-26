@@ -52,7 +52,7 @@ if [ ! -s $NASM_REPO ]; then
 fi
 
 echo "Installing Prereqs..."
-yum -y install autoconf automake bzip2 cmake freetype-devel gcc gcc-c++ git libtool
+yum -y install autoconf automake bzip2 bzip2-devel cmake freetype-devel gcc gcc-c++ git libtool
 yum -y install make mercurial nasm pkgconfig zlib-devel
 
 echo "Downloading Installer Packages..."
@@ -124,12 +124,6 @@ vorbisInstall
 cd $SOURCES_DIR
 vpxInstall
 
-#Install freetyp2
-cd $SOURCES_DIR
-freetypeInstall
-
-#Finally install ffmpeg
+# Finally install ffmpeg
 cd $SOURCES_DIR
 ffmpegInstall
-
-
