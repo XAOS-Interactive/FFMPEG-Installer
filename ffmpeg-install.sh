@@ -85,7 +85,6 @@ downloadInstallers
 . $INSTALLERS_DIR/libvorbis.sh
 . $INSTALLERS_DIR/libvpx.sh
 . $INSTALLERS_DIR/ffmpeg.sh
-. $INSTALLERS_DIR/freetype.sh
 
 #Run the installers
 #Install yasm
